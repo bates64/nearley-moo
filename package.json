@@ -1,0 +1,17 @@
+{
+  "name": "nearley-moo",
+  "version": "0.1.0",
+  "description": "ultra-fast tokenizer plugin for nearley",
+  "main": "nearley-moo.js",
+  "files": [ "nearley-moo.js" ],
+  "repository": "https://github.com/nanalan/nearley-moo",
+  "author": "alex <16batesa@gmail.com>",
+  "license": "MPL-2.0",
+  "peerDependencies": {
+    "moo": "^0.1.1",
+    "nearley": "^2.8.0"
+  },
+  "dependencies": {
+    "curry": "^1.2.0"
+  }
+}
