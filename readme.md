@@ -1,5 +1,5 @@
 ## nearley-moo
-#### [ultra-fast tokenizer](https://github.com/tjvr/moo) plugin for [nearley](https://github.com/Hardmath123/nearley) :cow2:
+#### [moo (ultra-fast tokenizer)](https://github.com/tjvr/moo) plugin for [nearley](https://github.com/Hardmath123/nearley) :cow2:
 
 [![npm](https://img.shields.io/npm/v/nearley-moo.svg)](https://npmjs.com/package/nearley-moo)
 

@@ -2,7 +2,7 @@ const curry = require('curry')
 
 // intended to be called by the grammar itself
 function nm(tokens) {
-  // XXX: until nearley supports `.` in token identifiers this may
+  // XXX: until nearley supports `.` in token identifiers this will
   //      pollute the global scope :(
   const g = global || window
 
@@ -35,13 +35,14 @@ nm.parser = curry((nearley, grammar, lexer) => {
 
   const self = {
     results: [],
+    parser, lexer,
 
     ignore: type => {
       self.ignoredTokens.push(...(type instanceof Array ? type : [ type ]))
       return self
     },
 
-    feed: str => {
+    feed: (str, fn) => {
       let token
 
       // feed to moo
@@ -51,8 +52,13 @@ nm.parser = curry((nearley, grammar, lexer) => {
         if (self.ignoredTokens.includes(token.type))
           continue
 
-        // feed to nearley
-        parser.feed([ token ])
+        if (fn) {
+          // pass to fn for magic to happen?
+          fn(token, self)
+        } else {
+          // feed to nearley
+          parser.feed([ token ])
+        }
       }
 
       self.results = parser.results

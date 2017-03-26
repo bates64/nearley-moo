@@ -1,7 +1,7 @@
 {
   "name": "nearley-moo",
   "version": "1.0.0",
-  "description": "ultra-fast tokenizer plugin for nearley",
+  "description": "moo (ultra-fast tokenizer) plugin for nearley",
   "main": "nearley-moo.js",
   "files": [ "nearley-moo.js" ],
   "repository": "https://github.com/nanalan/nearley-moo",
