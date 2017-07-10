@@ -46,7 +46,7 @@ nm.parser = curry((nearley, grammar, lexer) => {
       let token
 
       // feed to moo
-      lexer.feed(str)
+      lexer.reset(str)
       while(token = lexer.next()) {
         // ignore tokens if asked!
         if (self.ignoredTokens.includes(token.type))
